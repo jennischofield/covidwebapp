@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>COVID - 19 Contact Tracing</title>
+        <link rel="stylesheet" href="report.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       
+        
+        
+        <div class="sidenav">
+            <a href="homepage.php">Home</a>
+            <a href="overview.php">Overview</a>
+            <a href="addvisit.php">Add Visit</a>
+            <a href="reportinfection.php">Report</a>
+            <a href="settings.php">Settings</a>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <a href="index.php">Logout</a>
+        </div>
+        <div class="wrapper_left">
+            <div id="website_title_container">
+                <h1 id="website_title">
+                    COVID - 19 Contact Tracing
+                </h1>
+            </div>
+            <p id="heading">Alert Settings</p>
+            <img class="watermarkunlocked" src="watermark.png">
+            <hr class="horizontalLine">
+            <img class="watermarkunlocked" src="watermark.png">
+            <p style="margin-left:20%; text-align: center; font-size: 20px;position: absolute;">Here you may change the alert distance and the time span for which<br> the contact tracing will be performed </p>
+            <form action="settings.php" method="POST">
+                <br><br><br><br><br><br><br><br><br>
+                <label for="window">Window</label>
+                <select name="window" id="window" >
+                    <option value="1" selected="selected">One Week</option>
+                    <option value="2" >Two Weeks</option>
+                    <option value="3" >Three Weeks</option>
+                    <option value="4">Four Weeks</option>
+                  </select>
+                <label for="distance">Distance</label>
+                <input type="number" max="500" min="0" id="distance" name="distance" required><br>
+                <button style="margin-left: -5%;" type="submit" name = "submit">Report</button>  
+                <button style="float: right; margin-right: -60%;" type="reset">Cancel</button> 
+            </form> 
+            
+        </div>
+            
+    </body>
+            
+    </html>
+            
